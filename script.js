@@ -356,7 +356,8 @@ const cliccami = function (e) {
     ', ' +
     Math.floor(Math.random() * 256) +
     ', ' +
-    Math.floor(Math.random() * 256)
+    Math.floor(Math.random() * 256) +
+    ')'
 }
 
 // rgb(45, 202, 155)
