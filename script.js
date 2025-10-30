@@ -308,3 +308,55 @@ if ('') {
 // - ''
 // - 0 e -0
 // - NaN
+
+// FUNZIONI
+// una funzione consiste nel racchiudere un blocco di codice e fornirgli un nome
+// in quel modo, invocando il nome potremo ri-eseguire il blocco di codice
+
+const function1 = function (num = 1) {
+  let result = 0
+  for (let i = 0; i < num; i++) {
+    if (i % 2 === 0) {
+      result = result + i
+    }
+  }
+  return result
+}
+
+console.log(function1(5)) // <-- questa è una INVOCAZIONE (esecuzione) di function1
+console.log(function1(10)) // <-- questa è una INVOCAZIONE (esecuzione) di function1
+console.log(function1(20)) // <-- questa è una INVOCAZIONE (esecuzione) di function1
+
+console.log(function1()) // <-- questa è una INVOCAZIONE (esecuzione) di function1
+
+// FUNZIONI FRECCIA =>
+// una funzione freccia è una forma abbreviata delle funzioni classiche
+// in cui c'è meno sintassi
+
+// presenta un paio di differenze rispetto alla funzione classica
+// 1) se il corpo della funzione è monoriga ed è il valore di ritorno, potete
+// omettere la parola return e omettere le graffe
+const justModena2 = cities.filter(
+  (città) => città === 'modena' || città === 'roma'
+)
+
+// 2) le funzioni freccia NON hanno un loro contesto di esecuzione, e le parole
+// "this", "super" e altre possono avere valori inaspettati
+
+const cliccami = function (e) {
+  console.log('hai cliccato il bottone!')
+  console.log('oggetto evento', e)
+
+  //   e.target.style.backgroundColor = `rgb(${Math.floor(
+  //     Math.random() * 256
+  //   )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+  e.target.style.backgroundColor =
+    'rgb(' +
+    Math.floor(Math.random() * 256) +
+    ', ' +
+    Math.floor(Math.random() * 256) +
+    ', ' +
+    Math.floor(Math.random() * 256)
+}
+
+// rgb(45, 202, 155)
